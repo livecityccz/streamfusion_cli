@@ -750,8 +750,8 @@ def save_search_results_to_file(results: List[Dict[str, Any]], with_site: bool, 
 
 
 def choose_from_results(logger: Logger, results: List[Dict[str, Any]], with_site: bool = False) -> Tuple[Dict[str, Any], Optional[str], Optional[Dict[str, Any]]]:
-    # 展示前 50 条供选择
-    limit = min(len(results), 50)
+    # 展示前 30 条供选择
+    limit = min(len(results), 30)
     logger.info(f"共 {len(results)} 条结果，展示前 {limit} 条：")
     
     # 保存搜索结果到文件
